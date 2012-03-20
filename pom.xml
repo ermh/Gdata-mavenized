@@ -7,6 +7,12 @@
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<name>gdata</name>
+	
+	<scm>
+        <connection>scm:git:file://${basedir}</connection>
+        <developerConnection>scm:git:file://${basedir}</developerConnection>
+        <url>scm:git:file://${basedir}</url>
+    </scm>
   
 	<dependencies>
 		<dependency>
