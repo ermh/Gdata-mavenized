@@ -90,6 +90,8 @@
       value="${build.jars}/gdata-${template.service.name}-meta-${template.service.version}.jar"/>
     <property name="template.service.jar"
       value="${build.jars}/gdata-${template.service.name}-${template.service.version}.jar"/>
+    <property name="template.service.sources.jar"
+      value="${build.jars}/gdata-${template.service.name}-sources-${template.service.version}.jar"/>
     <property name="template.service.classes"
       value="${build.classes}/${template.service.name}"/>
     <property name="template.service.manifest"
@@ -160,6 +162,13 @@
     <jar destfile="${template.service.jar}"
          basedir="${template.service.classes}"
          manifest="${template.service.manifest}"/>
+
+    <jar destfile="${template.service.sources.jar}"
+         basedir="${build.src}"
+         manifest="${template.service.manifest}"
+		 includes="${template.service.includes}"
+		 excludes="${template.service.excludes}"
+		 />
   </target>
 
 
