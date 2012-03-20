@@ -1,5 +1,7 @@
-lib
-classes
-genfiles
+*~
+/lib
+/classes
+/target
+/genfiles
 /nbproject/private/
 /test
