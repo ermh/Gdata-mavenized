@@ -13,6 +13,17 @@
         <url>scm:git:file://${basedir}</url>
     </scm>
   
+	<distributionManagement>
+		<repository>
+			<id>distribution.releases</id>
+			<url>${distibution.releases.url}</url>
+		</repository>
+		<snapshotRepository>
+			<id>distribution.snapshots</id>
+			<url>${distibution.snapshots.url}</url>
+		</snapshotRepository>
+	</distributionManagement>
+  
 	<dependencies>
 		<dependency>
 			<groupId>com.google.guava</groupId>
