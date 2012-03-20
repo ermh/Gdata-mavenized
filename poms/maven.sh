@@ -1,4 +1,4 @@
-groupId=com.github.ermh.gdata
+groupId=com.magpeople.upload.google.gdata
 repoUrl=http://ccim4.local:8844/nexus/content/repositories/thirdparty
 repoId=thirdparty
 
@@ -27,7 +27,7 @@ END
 	fi
 	$command $sourcesOption -Dfile=${lib}/${artifactId}-${version}.jar -DpomFile=/tmp/main-$$.pom
 
-		rm -f "/tmp/main-$$.pom"
+	rm -f "/tmp/main-$$.pom"
 
 	metapom="${poms}/${artifactId}-meta-${version}.pom"
 	if [ -f "$metapom" ]; then
