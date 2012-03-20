@@ -4,13 +4,13 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.github.ermh.google.gdata</groupId>
   <artifactId>gdata-media</artifactId>
-  <version>1.0</version>
+  <version>1.0-X</version>
   <packaging>jar</packaging>
   <dependencies>
     <dependency>
       <groupId>com.github.ermh.google.gdata</groupId>
       <artifactId>gdata-client</artifactId>
-      <version>1.0</version>
+      <version>1.0-X</version>
     </dependency>
 	<dependency>
 	    <groupId>javax.mail</groupId>

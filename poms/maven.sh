@@ -1,6 +1,7 @@
 groupId=com.magpeople.upload.google.gdata
 repoUrl=http://ccim4.local:8844/nexus/content/repositories/thirdparty
 repoId=thirdparty
+subversion=1
 
 command="mvn deploy:deploy-file -Durl=${repoUrl} -DrepositoryId=${repoId}"
 # command=mvn install:install-file 
@@ -16,6 +17,7 @@ function deploy {
 	cp "$mainpom" /tmp/main-$$.pom
 	ed /tmp/main-$$.pom <<END
 %s!<groupId>com.github.ermh.google.gdata</groupId>!<groupId>${groupId}</groupId>!
+%s!<version>\(.*\)-X</version>!<version>\1-${subversion}</version>!
 w
 q
 END
@@ -34,6 +36,7 @@ END
 		cp "$metapom" /tmp/meta-$$.pom
 		ed /tmp/meta-$$.pom <<END
 %s!<groupId>com.github.ermh.google.gdata</groupId>!<groupId>${groupId}</groupId>!
+%s!<version>\(.*\)-X</version>!<version>\1-${subversion}</version>!
 w
 q
 END

@@ -4,6 +4,6 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.github.ermh.google.gdata</groupId>
   <artifactId>gdata-books-meta</artifactId>
-  <version>1.0</version>
+  <version>1.0-X</version>
   <packaging>jar</packaging>
 </project>
