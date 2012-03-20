@@ -1,5 +1,5 @@
 groupId=com.github.ermh.gdata
-repoUrl=http://nexus.example.com/nexus/content/repositories/thirdparty
+repoUrl=http://ccim4.local:8844/nexus/content/repositories/thirdparty
 repoId=thirdparty
 
 command="mvn deploy:deploy-file -Durl=${repoUrl} -DrepositoryId=${repoId}"

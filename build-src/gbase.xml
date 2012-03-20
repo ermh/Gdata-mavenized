@@ -27,6 +27,7 @@
     <javac debug="${javac.debug}"
            debuglevel="${javac.debuglevel}"
            sourcepath=""
+		   includeantruntime="false"
            srcdir="${build.src}"
            destdir="${build.classes.base}">
       <include name="**/gbase/client/*.java"/>

@@ -152,6 +152,7 @@
            sourcepath=""
            srcdir="${build.src}"
            destdir="${template.service.classes}"
+		   includeantruntime="false"
            includes="${template.service.includes}"
            excludes="${template.service.excludes}">
           <classpath>
@@ -262,6 +263,7 @@
     <javac debug="${javac.debug}"
            debuglevel="${javac.debuglevel}"
            sourcepath=""
+		   includeantruntime="false"
            srcdir="${build.src}"
            destdir="${build.classes.core}">
       <include name="com/google/gdata/client/*.java"/>
@@ -338,6 +340,7 @@
            debuglevel="${javac.debuglevel}"
            sourcepath=""
            srcdir="${build.src}"
+		   includeantruntime="false"
            destdir="${build.classes.client}">
         <include name="com/google/gdata/data/extensions/*.java"/>
         <classpath>
@@ -367,6 +370,7 @@
     <javac debug="${javac.debug}"
            debuglevel="${javac.debuglevel}"
            sourcepath=""
+		   includeantruntime="false"
            srcdir="${build.src}"
            destdir="${build.classes.media}">
       <classpath>
