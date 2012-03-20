@@ -117,6 +117,7 @@
          destdir="${template.service.meta.kinds}"
          compile="false"
          factory="com.google.gdata.data.apt.DataAnnotationProcessorFactory"
+		 includeantruntime="false"
          includes="${template.service.includes}"
          excludes="${template.service.excludes}">
         <classpath refid="${template.service.classpath}"/>

@@ -13,21 +13,15 @@
             </properties>
             <folders>
                 <source-folder>
+                    <label>Gdata-mavenized</label>
+                    <location>.</location>
+                    <encoding>UTF-8</encoding>
+                </source-folder>
+                <source-folder>
                     <label>src</label>
                     <type>java</type>
                     <location>src</location>
-                    <encoding>MacRoman</encoding>
-                </source-folder>
-                <source-folder>
-                    <label>sample</label>
-                    <type>java</type>
-                    <location>sample</location>
-                    <encoding>MacRoman</encoding>
-                </source-folder>
-                <source-folder>
-                    <label>Gdata-mavenized</label>
-                    <location>.</location>
-                    <encoding>MacRoman</encoding>
+                    <encoding>UTF-8</encoding>
                 </source-folder>
             </folders>
             <ide-actions>
@@ -49,15 +43,149 @@
                     <target>build</target>
                 </action>
             </ide-actions>
+            <export>
+                <type>folder</type>
+                <location>classes/analytics</location>
+                <script>${ant.script}</script>
+                <build-target>build</build-target>
+            </export>
+            <export>
+                <type>folder</type>
+                <location>classes/appsforyourdomain</location>
+                <script>${ant.script}</script>
+                <build-target>build</build-target>
+            </export>
+            <export>
+                <type>folder</type>
+                <location>classes/base</location>
+                <script>${ant.script}</script>
+                <build-target>build</build-target>
+            </export>
+            <export>
+                <type>folder</type>
+                <location>classes/blogger</location>
+                <script>${ant.script}</script>
+                <build-target>build</build-target>
+            </export>
+            <export>
+                <type>folder</type>
+                <location>classes/books</location>
+                <script>${ant.script}</script>
+                <build-target>build</build-target>
+            </export>
+            <export>
+                <type>folder</type>
+                <location>classes/calendar</location>
+                <script>${ant.script}</script>
+                <build-target>build</build-target>
+            </export>
+            <export>
+                <type>folder</type>
+                <location>classes/client</location>
+                <script>${ant.script}</script>
+                <build-target>build</build-target>
+            </export>
+            <export>
+                <type>folder</type>
+                <location>classes/codesearch</location>
+                <script>${ant.script}</script>
+                <build-target>build</build-target>
+            </export>
+            <export>
+                <type>folder</type>
+                <location>classes/contacts</location>
+                <script>${ant.script}</script>
+                <build-target>build</build-target>
+            </export>
+            <export>
+                <type>folder</type>
+                <location>classes/core</location>
+                <script>${ant.script}</script>
+                <build-target>build</build-target>
+            </export>
+            <export>
+                <type>folder</type>
+                <location>classes/docs</location>
+                <script>${ant.script}</script>
+                <build-target>build</build-target>
+            </export>
+            <export>
+                <type>folder</type>
+                <location>classes/finance</location>
+                <script>${ant.script}</script>
+                <build-target>build</build-target>
+            </export>
+            <export>
+                <type>folder</type>
+                <location>classes/gtt</location>
+                <script>${ant.script}</script>
+                <build-target>build</build-target>
+            </export>
+            <export>
+                <type>folder</type>
+                <location>classes/health</location>
+                <script>${ant.script}</script>
+                <build-target>build</build-target>
+            </export>
+            <export>
+                <type>folder</type>
+                <location>classes/maps</location>
+                <script>${ant.script}</script>
+                <build-target>build</build-target>
+            </export>
+            <export>
+                <type>folder</type>
+                <location>classes/media</location>
+                <script>${ant.script}</script>
+                <build-target>build</build-target>
+            </export>
+            <export>
+                <type>folder</type>
+                <location>classes/photos</location>
+                <script>${ant.script}</script>
+                <build-target>build</build-target>
+            </export>
+            <export>
+                <type>folder</type>
+                <location>classes/projecthosting</location>
+                <script>${ant.script}</script>
+                <build-target>build</build-target>
+            </export>
+            <export>
+                <type>folder</type>
+                <location>classes/sidewiki</location>
+                <script>${ant.script}</script>
+                <build-target>build</build-target>
+            </export>
+            <export>
+                <type>folder</type>
+                <location>classes/sites</location>
+                <script>${ant.script}</script>
+                <build-target>build</build-target>
+            </export>
+            <export>
+                <type>folder</type>
+                <location>classes/spreadsheet</location>
+                <script>${ant.script}</script>
+                <build-target>build</build-target>
+            </export>
+            <export>
+                <type>folder</type>
+                <location>classes/webmastertools</location>
+                <script>${ant.script}</script>
+                <build-target>build</build-target>
+            </export>
+            <export>
+                <type>folder</type>
+                <location>classes/youtube</location>
+                <script>${ant.script}</script>
+                <build-target>build</build-target>
+            </export>
             <view>
                 <items>
                     <source-folder style="packages">
                         <label>src</label>
                         <location>src</location>
-                    </source-folder>
-                    <source-folder style="packages">
-                        <label>sample</label>
-                        <location>sample</location>
                     </source-folder>
                     <source-file>
                         <location>${ant.script}</location>
@@ -70,15 +198,35 @@
                     <ide-action name="javadoc"/>
                 </context-menu>
             </view>
+            <subprojects/>
         </general-data>
         <java-data xmlns="http://www.netbeans.org/ns/freeform-project-java/2">
             <compilation-unit>
                 <package-root>src</package-root>
-                <source-level>1.5</source-level>
-            </compilation-unit>
-            <compilation-unit>
-                <package-root>sample</package-root>
-                <unit-tests/>
+                <classpath mode="compile">deps/jsr305.jar:deps/geronimo-activation_1.1_spec-1.0.2.jar:deps/geronimo-javamail_1.4_spec-1.6.jar:deps/guava-11.0.1.jar</classpath>
+                <built-to>classes/analytics</built-to>
+                <built-to>classes/appsforyourdomain</built-to>
+                <built-to>classes/base</built-to>
+                <built-to>classes/blogger</built-to>
+                <built-to>classes/books</built-to>
+                <built-to>classes/calendar</built-to>
+                <built-to>classes/client</built-to>
+                <built-to>classes/codesearch</built-to>
+                <built-to>classes/contacts</built-to>
+                <built-to>classes/core</built-to>
+                <built-to>classes/docs</built-to>
+                <built-to>classes/finance</built-to>
+                <built-to>classes/gtt</built-to>
+                <built-to>classes/health</built-to>
+                <built-to>classes/maps</built-to>
+                <built-to>classes/media</built-to>
+                <built-to>classes/photos</built-to>
+                <built-to>classes/projecthosting</built-to>
+                <built-to>classes/sidewiki</built-to>
+                <built-to>classes/sites</built-to>
+                <built-to>classes/spreadsheet</built-to>
+                <built-to>classes/webmastertools</built-to>
+                <built-to>classes/youtube</built-to>
                 <source-level>1.5</source-level>
             </compilation-unit>
         </java-data>
