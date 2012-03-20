@@ -19,10 +19,14 @@ function deploy {
 w
 q
 END
-	$command \
-		-Dfile=${lib}/${artifactId}-${version}.jar \
-		-Dsources=${lib}/${artifactId}-sources-${version}.jar \
-		-DpomFile=/tmp/main-$$.pom
+	sourcesJar="${lib}/${artifactId}-sources-${version}.jar"
+	if [ -f "$sourcesJar" ]; then
+	    sourcesOption="-Dsources=$sourcesJar"
+	else
+	    sourcesOption=""
+	fi
+	$command $sourcesOption -Dfile=${lib}/${artifactId}-${version}.jar -DpomFile=/tmp/main-$$.pom
+
 		rm -f "/tmp/main-$$.pom"
 
 	metapom="${poms}/${artifactId}-meta-${version}.pom"
@@ -33,11 +37,10 @@ END
 w
 q
 END
-	$command -Dfile=${lib}/${artifactId}-meta-${version}.jar \
-		-DpomFile=/tmp/meta-$$.pom
+	$command -Dfile=${lib}/${artifactId}-meta-${version}.jar -DpomFile=/tmp/meta-$$.pom
 	rm -f "/tmp/meta-$$.pom"
 	else
-		echo no pom $metapom 
+		echo no meta pom $metapom 
 	fi
 
 }
