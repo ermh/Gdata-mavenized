@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.magpeople.google.gdata</groupId>
 	<artifactId>gdata-java-client</artifactId>
-	<version>1.0.2-SNAPSHOT</version>
+	<version>1.45.0-1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<name>gdata-java-client</name>
 	
