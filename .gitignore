@@ -1,0 +1,7 @@
+/lib
+/classes
+/target
+/genfiles
+/nbproject/private/
+/test
+.svn
