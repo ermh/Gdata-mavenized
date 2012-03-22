@@ -42,7 +42,7 @@
 		<profile>
 			<id>google-collections</id>
 			<activation>
-				<activeByDefault>true</activeByDefault>
+				<activeByDefault>false</activeByDefault>
 			</activation>
 			
 			<dependencies>
@@ -61,7 +61,7 @@
 		<profile>
 			<id>google-guava</id>
 			<activation>
-				<activeByDefault>false</activeByDefault>
+				<activeByDefault>true</activeByDefault>
 			</activation>
 			
 			<dependencies>
