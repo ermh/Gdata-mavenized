@@ -36,6 +36,12 @@
 			<artifactId>activation</artifactId>
 			<version>1.1.1</version>
 		</dependency>
+		<dependency>
+			<groupId>org.apache.geronimo.specs</groupId>
+			<artifactId>geronimo-servlet_2.5_spec</artifactId>
+			<version>1.2</version>
+			<scope>provided</scope>
+		</dependency>
 	</dependencies>
 	
 	<profiles>
@@ -76,6 +82,7 @@
   
 	<build>
 		<sourceDirectory>java/src</sourceDirectory>
+		
 		<resources>
 			<resource>
 				<directory>java/src</directory>
@@ -90,6 +97,16 @@
 				</includes>
 			</resource>
 		</resources>
+		
+		<testSourceDirectory>java/sample</testSourceDirectory>
+		<testResources>
+			<testResource>
+				<directory>java/sample</directory>
+				<excludes>
+					<exclude>**/*.java</exclude>
+				</excludes>
+			</testResource>
+		</testResources>
 		
 		<plugins>
 			<plugin>
